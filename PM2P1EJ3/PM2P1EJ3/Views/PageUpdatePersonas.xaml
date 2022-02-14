@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM2P1EJ3.Views.PageUpdatePersonas">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Entry
+                x:Name="id" 
+                Placeholder="ID" 
+                Text="{Binding Id}" 
+                IsVisible="False" />
+            
+            <Entry
+                x:Name="nombre" 
+                Placeholder="Nombre" 
+                Text="{Binding Nombre}"/>
+
+            <Entry
+                x:Name="apellido" 
+                Placeholder="Apellido" 
+                Text="{Binding Apellido}" />
+
+            <Entry
+                x:Name="edad" 
+                Keyboard="Numeric"
+                Placeholder="Edad"  
+                Text="{Binding Edad}" />
+
+            <Entry
+                x:Name="correo"
+                Keyboard="Email"
+                Placeholder="Correo" 
+                Text="{Binding Correo}" />
+
+            <Entry
+                x:Name="direccion" 
+                Placeholder="Direccion" 
+                Text="{Binding Direccion}" />
+
+            <Grid ColumnDefinitions="*,*">
+                <Button
+                    x:Name="btnactualizar"
+                    Text="Actualizar"
+                    Clicked="btnactualizar_Clicked" />
+
+                <Button
+                    x:Name="btneliminar"
+                    Text="Eliminar"
+                    Grid.Column="1"
+                    Clicked="btneliminar_Clicked" />
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
